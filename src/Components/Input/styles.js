@@ -10,7 +10,7 @@ export const InputCustomizado = styled.input`
     padding: 16px 20px;
     width: 100%;
 
-        input:: placeholder {
+        input::placeholder {
             color: #FFF;
             font-size: 12px;
             opacity 0.7;

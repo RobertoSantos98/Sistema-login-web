@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Login from './Pages/Login/indes';
 import GlobalStyle from './Styles/global';
+import Routering from './Routes/routes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <React.StrictMode> 
     <GlobalStyle />
-    <Login />
+    <Routering />
   </React.StrictMode>
 );

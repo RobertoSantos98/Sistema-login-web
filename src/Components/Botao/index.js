@@ -1,10 +1,22 @@
-import React from "react";
-import { ButtonCustomizado } from "./styles";
+import React from 'react';
+import { ButtonCustomizado } from './styles'
 
-const Button = () => {
-    return ( 
-        <ButtonCustomizado/>
-     );
+const Botao = ({
+  type,
+  text,
+  onClick,
+  disabled,
+}) => {
+  return ( 
+    <ButtonCustomizado
+      type={type}
+      text={text}
+      onClick={onClick}
+      disabled={disabled}
+      >
+        {text}
+    </ButtonCustomizado>
+   );
 }
  
-export default Button;
+export default Botao;
