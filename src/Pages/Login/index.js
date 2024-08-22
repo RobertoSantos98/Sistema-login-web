@@ -4,6 +4,7 @@ import Input from "../../Components/Input/index";
 import Botao from "../../Components/Botao/index";
 import { validarEmail, validarSenha } from "../../Utils/validadores";
 import UserServices from '../../Services/index.js';
+import { NavLink, useNavigate } from "react-router-dom";
 
     const userService = new UserServices();
 
@@ -11,6 +12,7 @@ const Login = () => {
 
     const [ form, setForm ] = useState([]);
     const [ loading, setLoading] = useState();
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -19,8 +21,9 @@ const Login = () => {
             const response = await userService.login(form)
             console.log('response do login', response)
             if(response === true){
-                alert('Usuario logado com Sucesso!')
+                alert('Usuario logado com Sucesso!');
                 // navegar para home
+                navigate('/home');
             }
             setLoading(false)
         } catch (error) {

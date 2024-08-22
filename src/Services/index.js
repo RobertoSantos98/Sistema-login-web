@@ -13,11 +13,15 @@ export default class UserServices {
         if(data) {
             localStorage.setItem("nome", data.user.nome);
             localStorage.setItem("email", data.user.email);
-            localStorage.setItem("token", data.user.token);
+            localStorage.setItem("token", data.token.token);
 
             return true
         }
 
         return
+    }
+
+    usuarioAutenticado(){
+        return localStorage.getItem("token") !== undefined ? true : false;
     }
 }
